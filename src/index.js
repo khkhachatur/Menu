@@ -1,7 +1,5 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
-import ReactDOM from "react-dom/client";
-
+import ReactDOM from 'react-dom';
 
 import store from './store'
 import {Provider} from 'react-redux'
@@ -15,9 +13,7 @@ import App from './App';
 
 import { BrowserRouter } from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
+ReactDOM.render(
   <React.StrictMode>
 
   <ThemeProvider theme={theme}>
@@ -29,4 +25,5 @@ root.render(
         </BrowserRouter>
     </ThemeProvider>
       </React.StrictMode>,
+      document.getElementById('root')
 );
